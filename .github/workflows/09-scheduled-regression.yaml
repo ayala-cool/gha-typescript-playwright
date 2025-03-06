@@ -1,8 +1,8 @@
 name: Run Playwright Tests (nightly)
 
-on:
-  schedule:
-    - cron: "33 12 * * 1-5" # Triggers the workflow at 1 AM UTC, Monday-Friday.
+# on:
+#   schedule:
+#     - cron: "33 12 * * 1-5" # Triggers the workflow at 1 AM UTC, Monday-Friday.
 
 jobs:
   tests:
