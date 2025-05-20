@@ -1,4 +1,4 @@
-name: Upload Playwright Reports
+name: Upload Playwright Reports Test
 
 on: push
 
