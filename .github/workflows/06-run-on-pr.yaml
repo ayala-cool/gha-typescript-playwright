@@ -1,10 +1,10 @@
-name: Upload Playwright Reports Test
+name: Run Playwright Tests on Pull Requests
 
-on: push
+on: pull_request # Triggers the workflow when a pull request is opened or updated.
 
 jobs:
   tests:
-    name: Upload Playwright Reports
+    name: Run Playwright Tests on Pull Requests
     runs-on: ubuntu-latest
 
     steps:
@@ -33,11 +33,3 @@ jobs:
 
       - name: Run Playwright tests
         run: npx playwright test
-
-      - name: Upload Test Reports # Uploads test results as artifacts for later review.
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-artifacts # The artifact name displayed in GitHub Actions.
-          path: |
-            playwright-report  
-            test-results
